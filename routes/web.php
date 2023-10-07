@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -43,11 +44,13 @@ require __DIR__.'/AdminAuth.php';
 
 Route::middleware('auth:admin')->group(function () {
 
-    Route::get('/admin/dashboard', function () {
-        return Inertia::render('Admin/Dashboard');
-    })->name('admin.dashboard');
+    Route::get('/admin/dashboard',[AdminDashboardController::class,'index'])->name('admin.dashboard');
     
     Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('admin.profile.edit');
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/employee',function(){
+        return Inertia::render('Employee/EmployeeIndex');
+    });
 });

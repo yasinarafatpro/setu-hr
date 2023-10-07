@@ -46,7 +46,10 @@ defineProps({
                     class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                     >Register As Employee</Link
                 >
-                <Link href="route('super-admin')" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Login as Super Admin</Link>
+                <Link 
+                :href="route('admin.login')" 
+                class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                >Login as Super Admin</Link>
             </template>
         </div>
         <!-- <div class="p-4">

@@ -1,13 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import EmployeeIndex from './Pages/Employee/EmployeeIndex.vue'
 import WelcomeVue from './Pages/Welcome.vue';
+import DashboardVue from './Pages/Admin/Dashboard.vue';
 
 const routes = [
-    {
-        path: '/',
-        component: WelcomeVue,
-        name: 'welcome-index',
-    },
     {
       path: '/employee',
       component: EmployeeIndex,

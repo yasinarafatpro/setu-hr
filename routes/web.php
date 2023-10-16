@@ -5,7 +5,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\HeadOfficeController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ZonalOfficeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,12 +46,11 @@ require __DIR__.'/AdminAuth.php';
 Route::middleware('auth:admin')->group(function () {
 
     Route::get('/admin/dashboard',[AdminDashboardController::class,'index'])->name('admin.dashboard');
+    Route::get('/admin/employee',[EmployeeController::class,'index'])->name('employee.index');
+    Route::get('/admin/zonal',[ZonalOfficeController::class,'index'])->name('zonal.index');
     
     Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('admin.profile.edit');
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/employee',function(){
-        return Inertia::render('Employee/EmployeeIndex');
-    });
 });

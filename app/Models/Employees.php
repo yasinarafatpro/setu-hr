@@ -29,6 +29,7 @@ class Employees extends Model
         'phone_number',
         'designation',
         'branch_name',
+        'amount_of_deposit',
         'status'
     ];
 }

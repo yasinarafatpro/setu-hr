@@ -160,7 +160,7 @@ defineProps({
             <template v-else>
                 <NavLink
                     :href="route('login')"
-                    active="true"
+                    active
                     >Log in As Employee</NavLink
                 >
                 <NavLink
@@ -173,8 +173,8 @@ defineProps({
         </div>
         </div>
       </header>
-      <main class="ml-64 p-4"> 
-       
+      <main class="w-full p-4 bg-slate-300 m-10"> 
+       <p>Setu</p>
       </main>
     </div>
 </template>

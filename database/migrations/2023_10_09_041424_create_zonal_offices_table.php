@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('employees', function (Blueprint $table) {
+        Schema::create('zonal_offices', function (Blueprint $table) {
             $table->id();
-            $table->integer('emp_id');
+            $table->unsignedBigInteger('headoffice_id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('phone_number');
-            $table->string('designation');
-            $table->string('branch_name');
-            $table->integer('amount_of_deposit');
-            $table->integer('status')->default(1);
+            $table->string('address');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('employees');
+        Schema::dropIfExists('zonal_offices');
     }
 };

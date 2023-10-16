@@ -23,6 +23,7 @@ class EmployeeSeeder extends Seeder
                 'phone_number'=>$faker->phoneNumber(),
                 'designation'=>$faker->word(),
                 'branch_name'=>$faker->word(),
+                'amount_of_deposit'=>$faker->numberBetween(500,5000),
                 'status'=>$faker->randomElement([0,1])
             ]);
         }

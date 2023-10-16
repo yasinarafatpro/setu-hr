@@ -23,6 +23,12 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('admin.dashboard')" :active="route().current('dashboard')">
                                    Super Admin Dashboard
                                 </NavLink>
+                                <NavLink :href="route('employee.index')" :active="route().current('employee.index')">
+                                   Employees
+                                </NavLink>
+                                <NavLink :href="route('zonal.index')" :active="route().current('zonal.index')">
+                                   Zonal Offices
+                                </NavLink>
                             </div>
                         </div>
 

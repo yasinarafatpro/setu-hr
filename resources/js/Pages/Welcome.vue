@@ -148,7 +148,6 @@ defineProps({
 </template> -->
 <template>
     <div>
-        
       <header class="w-full bg-slate-300" v-if="showHeader">
         <div class="p-4">
           <div v-if="canLogin">
@@ -169,12 +168,20 @@ defineProps({
                     >Register As Employee</NavLink
                 >
                 <NavLink :href="route('admin.login')">Login as Super Admin</NavLink>
+                <NavLink >Login as Branch Manager</NavLink>
+                <NavLink >Register as Branch Manager</NavLink>
+                <NavLink >Login as Branch Zonal Manager</NavLink>
+                <NavLink >Register as Zonal Manager</NavLink>
+                <NavLink >Login as Branch Area Manager</NavLink>
+                <NavLink >Register as Area Manager</NavLink>
             </template>
         </div>
         </div>
       </header>
-      <main class="w-full p-4 bg-slate-300 m-10"> 
-       <p>Setu</p>
+      <main class="p-4 bg-slate-300 m-10 text-center"> 
+       <div class="container">
+         <p>Hr Management Site</p>
+       </div>
       </main>
     </div>
 </template>
